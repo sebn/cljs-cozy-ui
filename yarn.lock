@@ -1151,8 +1151,9 @@ cosmiconfig@^5.0.5:
     js-yaml "^3.9.0"
     parse-json "^4.0.0"
 
-"cozy-ui@file:../../cozy/libs/cozy-ui":
+cozy-ui@sebn/cozy-ui#transpilation-build:
   version "0.0.0-development"
+  resolved "https://codeload.github.com/sebn/cozy-ui/tar.gz/2d66214e6224780cc8e4a682b270688a6b148579"
   dependencies:
     babel-cli "^6.26.0"
     babel-plugin-css-modules-transform "^1.5.0"
