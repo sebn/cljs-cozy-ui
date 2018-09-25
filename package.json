@@ -4,10 +4,11 @@
     "watch": "shadow-cljs watch app;",
     "release": "shadow-cljs release app;",
     "server": "shadow-cljs server;",
+    "postinstall": "cp node_modules/cozy-ui/dist/stylesheet.css public/css/cozy-ui.css",
     "clean": "rm -rf target; rm -rf public/js/compiled"
   },
   "dependencies": {
-    "cozy-ui": "^11.1.2",
+    "cozy-ui": "file:../../cozy/libs/cozy-ui",
     "create-react-class": "^15.6.2",
     "react": "^16.0.0",
     "react-dom": "^16.0.0",
