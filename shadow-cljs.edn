@@ -1,0 +1,14 @@
+{:source-paths ["src"]
+ :dependencies [[binaryage/devtools "0.9.7"]
+                [reagent "0.8.0-alpha2"]
+                [cider/cider-nrepl "0.16.0"]]
+ :nrepl {:port 8777}
+ :builds
+ {:app {:target :browser
+        :output-dir "public/js/compiled"
+        :asset-path "/js/compiled"
+        :modules {:main {:entries [cljs-cozy-ui.core]}}
+        :devtools {:after-load cozy-ui-cljs-playground.core/start
+                   :http-root "public"
+                   :http-port 3000
+                   :preloads [devtools.preload]}}}}

@@ -1,0 +1,5 @@
+node_modules/
+.nrepl-port
+/public/css/cozy-ui.css
+/public/js/compiled/
+.shadow-cljs/

@@ -1,0 +1,15 @@
+{
+  "scripts": {
+    "clean": "rm -rf public/js/compiled target",
+    "deploy": "./deploy.sh",
+    "postinstall": "cp node_modules/cozy-ui/dist/stylesheet.css public/css/cozy-ui.css",
+    "start": "shadow-cljs watch app"
+  },
+  "dependencies": {
+    "cozy-ui": "sebn/cozy-ui#transpilation-build",
+    "create-react-class": "^15.6.2",
+    "react": "^16.0.0",
+    "react-dom": "^16.0.0",
+    "shadow-cljs": "^2.0.80"
+  }
+}
