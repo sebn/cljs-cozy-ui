@@ -48,20 +48,22 @@
         [:> Subtitle "Cozy is working for you"]
         [:> Paragraph "Automatic follow-up of your medical expenses"]]]
       [:> CTA
-       [:> Button {:on-click #(js/console.log "Coming soon")}
-        "Connect your bank accounts"]]]
+       [:> Button {:label "Connect your bank accounts"
+                   :on-click #(js/console.log "Coming soon")}]]]
      [:h2 "Button"]
-     [:p
+     [:div
       (for [theme ["regular" "danger" "highlight" "secondary" "danger-outline" "alpha"]]
-        [:p
+        ^{:key theme}
+        [:div
          (for [props [{} {:disabled true} {:busy true}]]
+           ^{:key (str theme (-> props keys first))}
            [:> Button (merge {:label theme :theme theme} props)])])]
      [:h2 "Avatar"]
-     [:p
+     [:div
       [:> Avatar {:size "small"}]
       [:> Avatar {:text "CD" :size "small"}]
       [:> Avatar {:image "https://cozy.io/fr/images/cozy-logo_white.png" :size "small"}]]
-     [:p
+     [:div
       [:> Avatar {:size "medium"}]
       [:> Avatar {:text "CD" :size "medium"}]
       [:> Avatar {:image "https://cozy.io/fr/images/cozy-logo_white.png" :size "medium"}]]]]])
