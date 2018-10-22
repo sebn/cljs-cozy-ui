@@ -1,11 +1,12 @@
 (ns cljs-cozy-ui.core
   (:require [reagent.core :as reagent]
-            ["cozy-ui/dist/react/Avatar" :refer [Avatar]]
-            ["cozy-ui/dist/react/Button" :refer [Button]]
-            ["cozy-ui/dist/react/Hero" :default Hero :refer [Title Sections Section Icon Subtitle Paragraph CTA]]
-            ["cozy-ui/dist/react/Layout" :refer [Content Layout Main]]
-            ["cozy-ui/dist/react/Nav" :default Nav :refer [NavIcon NavItem NavText genNavLink]]
-            ["cozy-ui/dist/react/Sidebar" :default Sidebar]))
+            ["cozy-ui/transpiled/react" :refer [IconSprite]]
+            ["cozy-ui/transpiled/react/Avatar" :refer [Avatar]]
+            ["cozy-ui/transpiled/react/Button" :refer [Button]]
+            ["cozy-ui/transpiled/react/Hero" :default Hero :refer [Title Sections Section Icon Subtitle Paragraph CTA]]
+            ["cozy-ui/transpiled/react/Layout" :refer [Content Layout Main]]
+            ["cozy-ui/transpiled/react/Nav" :default Nav :refer [NavIcon NavItem NavText genNavLink]]
+            ["cozy-ui/transpiled/react/Sidebar" :default Sidebar]))
 
 (def NavLink
   (genNavLink
@@ -66,7 +67,8 @@
      [:div
       [:> Avatar {:size "medium"}]
       [:> Avatar {:text "CD" :size "medium"}]
-      [:> Avatar {:image "https://cozy.io/fr/images/cozy-logo_white.png" :size "medium"}]]]]])
+      [:> Avatar {:image "https://cozy.io/fr/images/cozy-logo_white.png" :size "medium"}]]]]
+   [IconSprite]])
 
 (defn ^:dev/after-load start []
   (reagent/render-component [demo]
